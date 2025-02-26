@@ -1,0 +1,525 @@
+:root {
+    --headcolor: #FFD700
+}
+
+/* the hii  imoji */
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+.home-section {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.homecontainer {
+    /* border-bottom: 2px solid rgb(255, 255, 255); */
+    display: flex;
+    min-height: 100vh;
+    height: auto;
+    justify-content: center;
+    /* position: absolute; */
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    padding: 1.2rem;
+    z-index: -1;
+
+
+}
+
+.homeimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid yellow; */
+    width: 45%;
+    /* overflow: hidden; */
+}
+
+.homeimg img {
+    width: 70%;
+    transition: transform 2s ease !important;
+    height: 30%;
+    border-radius: 40%;
+    border: 2px solid white;
+    outline: none;
+    box-shadow: 0 5px 10px 10px;
+
+    
+
+}
+
+.homeimg img:hover{
+    scale: 1.065;
+
+}
+
+
+.hometext {
+    /* border: 2px solid pink; */
+    width: 45%;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white; 
+    -webkit-text-stroke: 1px #ffffff;
+
+
+
+}
+
+.hometext h2 {
+    font-size: 2rem;
+    
+}
+
+.hometext span {
+    /* color: #FFD700; */
+    position: relative;
+    -webkit-text-stroke: 1px #ffe74b;
+    color: transparent;
+    
+
+}
+
+/* towards about buttons */
+.towardsAbout {
+    margin: 1rem 1rem;
+    transform: translate(0, 0);
+
+}
+
+.link_towardsAbout {
+    position: relative;
+}
+
+.link_towardsAbout a {
+    border-radius: 15px;
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #000000;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+}
+
+.icon svg {
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: var(--headcolor);
+    transition: all .35s;
+}
+
+.link_towardsAbout a:hover {
+    width: 200px;
+    border: 2px solid var(--headcolor);
+    background: transparent;
+    color: white;
+}
+
+.link_towardsAbout a:hover+.icon {
+    border: 3px solid var(--headcolor);
+    right: -25%;
+}
+
+
+/* CONTACT LOGOS */
+
+
+.hometext .socialIcons {
+    /* border: 3px solid white; */
+    /* height: 2.5rem; */
+    /* width: 90%; */
+    margin: 0.8rem 0.5rem;
+
+}
+
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+
+}
+
+.socialIcons i {
+
+    font-size: 2rem;
+
+    transition: all 0.5s;
+
+}
+
+#linked {
+    color: rgb(17, 106, 215);
+    animation: lk 1s infinite;
+    animation-delay: 1s;
+
+}
+
+#linked:hover {
+    color: rgb(45, 135, 245);
+}
+
+@keyframes lk {
+    0% {
+        color: rgb(37, 117, 215);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(37, 117, 215);
+    }
+
+    50% {
+        color: rgb(25, 129, 255);
+        font-size: 2.12rem;
+        text-shadow: 1px 1px 1px rgb(25, 129, 255);
+    }
+
+    100% {
+        color: rgb(37, 117, 215);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(37, 117, 215);
+    }
+}
+
+
+#git {
+    color: rgb(255, 255, 255);
+    animation: gt 1s infinite;
+    animation-delay: 2s;
+    -webkit-text-stroke: 1px rgb(151, 151, 151) !important;
+}
+
+#git:hover {
+    color: rgb(255, 255, 255);
+}
+
+@keyframes gt {
+    0% {
+        color: rgb(255, 255, 255);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    }
+
+    50% {
+        color: rgb(255, 255, 255);
+        font-size: 2.12rem;
+        text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    }
+}
+
+#wp {
+    color: rgb(26, 194, 26);
+    animation: wpp 1s infinite;
+    animation-delay: 3s;
+}
+
+#wp:hover {
+    color: rgb(13, 255, 13);
+}
+
+@keyframes wpp {
+    0% {
+        color: rgb(29, 198, 29);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(29, 198, 29);
+    }
+
+    50% {
+        color: rgb(13, 255, 13);
+        font-size: 2.12rem;
+        text-shadow: 2px 2px 2px rgb(13, 255, 13);
+    }
+
+    100% {
+        color: rgb(29, 198, 29);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(29, 198, 29);
+    }
+}
+
+#insta {
+    color: rgb(232, 23, 100);
+    animation: ist 1s infinite;
+    animation-delay: 4s;
+
+}
+
+#insta:hover {
+    color: rgb(255, 40, 119);
+
+}
+
+@keyframes ist {
+    0% {
+        color: rgb(255, 40, 119);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(255, 40, 119);
+    }
+
+    50% {
+        color: rgb(255, 40, 119);
+        font-size: 2.12rem;
+        text-shadow: 2px 2px 2px rgb(255, 40, 119);
+    }
+
+    100% {
+        color: rgb(255, 40, 119);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(255, 40, 119);
+    }
+}
+
+#fb {
+    color: rgb(35, 137, 220);
+    animation: fbb 1s infinite;
+    animation-delay:5s;
+}
+
+#fb:hover {
+    color: rgb(43, 160, 255);
+}
+
+@keyframes fbb {
+    0% {
+        color: rgb(43, 160, 255);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(43, 160, 255);
+    }
+
+    50% {
+        color: rgb(43, 160, 255);
+        font-size: 2.12rem;
+        text-shadow: 2px 2px 2px rgb(43, 160, 255);
+    }
+
+    100% {
+        color: rgb(43, 160, 255);
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px rgb(43, 160, 255);
+    }
+}
+
+
+
+
+
+
+
+#gmail {
+    color: red;
+    animation: gm 1s infinite;
+    animation-delay: 6s;
+}
+
+@keyframes gm {
+    0% {
+        color: red;
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px red;
+    }
+
+    50% {
+        color: red;
+        font-size: 2.12rem;
+        text-shadow: 2px 2px 2px red;
+    }
+
+    100% {
+        color: red;
+        font-size: 2.1rem;
+        text-shadow: 1px 1px 1px red;
+    }
+}
+.socialIcons a i:hover {
+    font-size: 2.1rem;
+}
+
+
+
+
+/* ------------------------------------ */
+/* the home img code  */
+
+
+
+.box-panel{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.widget-container{
+  
+	transition: all 0.3s ease;
+	.common-flip-style{
+		width: 400px;
+		height: 400px;
+		cursor: pointer;
+		.common-box-style{
+			transform-style: preserve-3d;
+			backface-visibility: hidden;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-transition: all .6s ease-in-out;
+			-o-transition: all .6s ease-in-out;
+			transition: all .6s ease-in-out;
+			border-radius: 10px;
+		}
+	}
+}
+
+.flip-box{
+	position: relative;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	.box-front{
+		transform: none;
+		z-index: 1;
+		background-image: url('https://varad177.github.io/portfolio/assets/bitmojivarad.jpeg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.box-back{
+		width: calc(100% - 10px);
+		height: calc(100% - 10px);
+		transform: rotateX(0) rotateY(-180deg);
+		background: #000000;
+	}
+
+}
+
+.box-content-wrapper{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	text-align: center;
+	transform: translateZ(90px);
+    background: transparent;
+}
+
+.box-content{
+    color: white;
+}
+
+@media(max-width:900px){
+    
+.widget-container{
+  
+	transition: all 0.3s ease;
+	.common-flip-style{
+		width: 250px;
+		height: 250px;
+		cursor: pointer;
+		.common-box-style{
+			transform-style: preserve-3d;
+			backface-visibility: hidden;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-transition: all .6s ease-in-out;
+			-o-transition: all .6s ease-in-out;
+			transition: all .6s ease-in-out;
+			border-radius: 10px;
+		}
+	}
+}
+
+.box-panel{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+    height: 100%;
+    width: 100%;
+}
+}
+
+
+
+.chatbotLink{
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, red , blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
